@@ -1,9 +1,9 @@
-# โปรแกรมเช็คยอดเงินจาก TrueWallet Money (No crack !)
+# โปรแกรมเช็คยอดเงินจาก TrueMoney Wallet (No crack !)
 > ฟังก์ชั่นหลัก ๆ ก็คือเช็คยอดเงินและการบันทึกลงไฟล์
 
 ![image](https://github.com/user-attachments/assets/9e9181df-b6e5-4f7b-a8f6-c0a3a0e0564d)
 
-[ดาวน์โหลดโปรแกรม.exe]([https://n.hitorikungz.tk](https://github.com/HitoriKung/tmw_balance/releases/tag/1.0))
+[ดาวน์โหลดโปรแกรม.exe]([https://n.hitorikungz.tk](https://github.com/HitoriKung/tmw_balance/releases/tag/1.0)
 
 วิธีการหา Token
 - เปิดแอพ TrueWallet Money
