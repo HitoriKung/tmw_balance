@@ -1,4 +1,5 @@
-import tkinter as tk
+import ttkbootstrap as tb
+from ttkbootstrap.constants import *
 from tkinter import messagebox, scrolledtext
 import requests
 
@@ -20,27 +21,28 @@ def check_balance():
             mobile_no = response_data['data']['mobile_no']
             updated_at = response_data['data']['updated_at']
             text_area.tag_configure("blue", foreground="blue")
-            text_area.delete(1.0, tk.END)
+            text_area.delete(1.0, tb.END)
 
-            text_area.insert(tk.END, f"ยอดเงินคงเหลือ: ", "normal")
-            text_area.insert(tk.END, balance, "blue")
-            text_area.insert(tk.END, f" บาท\nหมายเลขโทรศัพท์: {mobile_no}\nข้อมูลเมื่อ: {updated_at}", "normal")
+            text_area.insert(tb.END, f"ยอดเงินคงเหลือ: ", "normal")
+            text_area.insert(tb.END, balance, "blue")
+            text_area.insert(tb.END, f" บาท\nหมายเลขโทรศัพท์: {mobile_no}\nข้อมูลเมื่อ: {updated_at}", "normal")
         else:
             messagebox.showerror("Error", "ไม่สามารถดึงข้อมูลได้ โปรดเช็คข้อมูลของท่านใหม่อีกครั้ง")
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred: {e}")
 
-root = tk.Tk()
+root = tb.Window(themename="simplex")
 root.title("เช็คยอดเงินจากทรูมันนี่วอลเล็ท")
+root.geometry("500x400")
 
-tk.Label(root, text="โทเคน:").pack(pady=5)
-token_entry = tk.Entry(root, width=50, show="*")
+tb.Label(root, text="โทเคน:", font=("Arial", 12)).pack(pady=5)
+token_entry = tb.Entry(root, width=50, show="*", font=("Arial", 12))
 token_entry.pack(pady=5)
 
-check_button = tk.Button(root, text="ตรวจสอบ", command=check_balance)
+check_button = tb.Button(root, text="ตรวจสอบ", command=check_balance, bootstyle=SUCCESS)
 check_button.pack(pady=10)
 
-text_area = scrolledtext.ScrolledText(root, width=60, height=15)
+text_area = scrolledtext.ScrolledText(root, width=60, height=15, font=("Arial", 12))
 text_area.pack(pady=10)
 
 root.mainloop()
